@@ -4,14 +4,15 @@ title:  "OwnCloud란 무엇인가"
 date:   2021-02-12 19:00:00 +0900
 categories: jekyll update
 ---
-1. NextCloud 와 OwnCloud 가 무엇인지와 용도
-- OwnCloud 란 무엇일까요. 말씀드리기 앞서 클라우드에 대해서 설명드리겠습니다.
+#1. OwnCloud 란 무엇인지와 용도
+===
+OwnCloud 란 무엇일까요? 말씀드리기 앞서 클라우드에 대해서 설명드리겠습니다.
 - 클라우드란 인터넷 통해 서비스를 제공받는 서비스 입니다. 
 - 그래서 OwnCloud란 인터넷을 통한NAS 형태의 오픈소스 파일 호스팅 서비스를 만들고 사용하기 위한 클라이언트-서버 소프트웨어 입니다.
-- 파일을 저장할때는 네트워크 기반 파일 저장(클라우드 스토리지)을 이용하며 OwnCloud의사용자에게 장치에서의 모든 파일에 액세스를 제공, 보안, 제어 및 통합을 제공합니다.
+- 파일을 저장할때는 네트워크 기반 파일 저장(클라우드 스토리지)을 이용하며 OwnCloud의 사용자에게 장치에서의 모든 파일에 액세스를 제공, 보안, 제어 및 통합을 제공합니다.  
 
-
-2. NextCloud 와 OwnCloud 의 설치 과정 (마크다운 텍스트 형태로 작성)
+#2. OwnCloud 의 설치 과정
+===
 * 2-1. DB, http 패키지 설치  
 `yum -y install mysql-community-server wget mariadb-server mariadb httpd`
 * 2-2. 필요한 php 패키지 설치  
@@ -43,7 +44,8 @@ default-character-set = utf8
 default-character-set = utf8
 ```
 
-* 2-7. systemctl enable --now mysqld (mysql 서비스 enable 설정)
+* 2-7. mysql 서비스 enable 설정  
+`systemctl enable --now mysqld`
 
 ```
  + mysql -u root 
@@ -110,12 +112,16 @@ Alias /owncloud "/var/www/html/owncloud/"
 </Directory>
 ```
 
-* 2-9. chown -R apache:apache owncloud (apache 계정 owncloud 디렉토리 소유권 설정)
-* 2-10. chmod -R 0770 (apache 계정 owncloud 디렉토리 권한 설정)
-* 2-11. systemctl restart httpd (http 서비스 재시작)
+* 2-9. apache 계정 owncloud 디렉토리 소유권 설정  
+`chown -R apache:apache owncloud`
+* 2-10. apache 계정 owncloud 디렉토리 권한 설정  
+`chmod -R 770 owncloud`
+* 2-11. http 서비스 재시작  
+`systemctl restart httpd`
 
 
-3. OwnCloud 의 공통기능
+#3. OwnCloud 의 공통기능
+===
 기능이 여러가지 있기에 제일 많이 사용하는 기능들에 대해서만 소개하도록 하겠습니다.
 
  - 파일 업로드 : 가장 기본적인 NAS와 같은 형태로 Drag and Drop 또는 Upload 이용한 파일 업로드가 가능합니다.
