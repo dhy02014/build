@@ -5,7 +5,7 @@ date:   2021-02-12 19:00:00 +0900
 categories: jekyll update
 ---
 
-![Cloudimg](./img/Cloud.png)
+![Cloudimg](https://raw.githubusercontent.com/dhy02014/dhy02014.github.io/main/img/Cloud.png)
 
 #클라우드(Cloud) 란?
 ===
