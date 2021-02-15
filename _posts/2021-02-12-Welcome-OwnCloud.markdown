@@ -5,7 +5,7 @@ date:   2021-02-12 19:00:00 +0900
 categories: jekyll update
 ---
 
-![Cloudimg](https://github.com/dhy02014/dhy02014.github.io/blob/main/_posts/2021-02-12-Welcome-OwnCloud.markdown)
+![Cloudimg](./img/Cloud.png)
 
 #클라우드(Cloud) 란?
 ===
