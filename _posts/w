@@ -12,6 +12,7 @@ categories: jekyll update
 
 
 2. NextCloud 와 OwnCloud 의 설치 과정 (마크다운 텍스트 형태로 작성)
+
 * 2-1. DB, http 패키지 설치  
 `yum -y install mysql-community-server wget mariadb-server mariadb httpd`
 * 2-2. 필요한 php 패키지 설치  
@@ -20,10 +21,8 @@ categories: jekyll update
 `systemctl disable --now firewalld` 
 * 2-4. 압축 파일 다운로드  
 `wget https://download.owncloud.org/community/owncloud-complete-20201216.zip`
-* 2-5. 서비스 할 서버에서 압축파일 해제  
-`unzip 20201216.zip`
-* 2-6. mysql config 추가, mysql 기본 인코딩 UTF-8 설정  
-`vi /etc/my.cnf`
+* 2-5. `unzip 20201216.zip` (서비스 할 서버에서 압축파일 해제)
+* 2-6. `vi /etc/my.cnf` (mysql config 추가, mysql 기본 인코딩 UTF-8 설정)
 
 ```
 [client]
@@ -48,31 +47,23 @@ default-character-set = utf8
 ```
  + mysql -u root 
   - (mysql 서비스 root 접속)
-
  + mysql> update user set password=password('새비밀번호') WHERE user='root';
   - (mysql 서비스 root PW 설정) [option]
-
  + mysql> create database <DB이름> default character set utf8;
   - (owncloud에서 사용할 DB 생성)
-
  + mysql> create user '<계정명>'@'%' identified by '<password>' 
   - (외부접속 가능한 계정 생성)
-
  + mysql> create user '<계정명>'@'localhost' identified by '<password>' 
   - (로컬접속만 가능한 계정 생성) [option]
-
  + mysql> grant all privileges on <DB이름>.* to '아이디'@'%'; 
   - (owncloud DB에 새로 생성한 계정 권한 부여)
-
  + mysql> grant all privileges on <DB이름>.* to '아이디'@'localhost'; 
   - (owncloud DB에 새로 생성한 계정 권한 부여)
-
  + mysql> flush privileges; 
   - (mysql 설정 저장)
 ```
 
-* 2-8. owncloud config 종속 옵션 및  설정  
-`vi /etc/httpd/conf.d/owncloud.conf`
+* 2-8. vi /etc/httpd/conf.d/owncloud.conf (owncloud config 종속 옵션 및  설정)
 
 ```
 Alias /owncloud "/var/www/html/owncloud/"
