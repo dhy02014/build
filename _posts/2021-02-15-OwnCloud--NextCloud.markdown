@@ -4,7 +4,7 @@ title:  "OwnCloud와 NextCloud의 기능 비교"
 date:   2021-02-15 11:00:00 +0900
 categories: jekyll update
 ---
-|NAS 기능 비교 항목|OwnCloud|NextCloud|
+|NAS 기능 비교 항목	 |OwnCloud|NextCloud|
 |:---|:---:|:---:|
 |파일 업로드						|O|O|
 |파일 공유							|O|O|

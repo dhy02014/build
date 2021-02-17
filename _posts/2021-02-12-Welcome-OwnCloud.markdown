@@ -1,31 +1,33 @@
 ---
 layout: post
-title:  "OwnCloud란 무엇인가"
+title:  "OwnCloud 란 무엇인가?"
 date:   2021-02-12 19:00:00 +0900
 categories: jekyll update
 ---
 
 ![Cloudimg](../../../../../assets/Cloud.png)
 
-#클라우드(Cloud) 란?
+#Cloud 란 무엇인가?
 ===
- - 클라우드란 인터넷 을 뜻합니다.
- - 이러한 인터넷을 통해 서비스를 제공받는 서비스가 **클라우드 서비스**  입니다.
- - **클라우드 서비스**란 흔히 다른 장소에 있는 물리적, 소프트웨어적 자원을 이용하여   
+ - **Cloud** 는 대부분의 사람들이 누구나 써봤을 **인터넷** 을 뜻합니다.
+ - 이러한 **Cloud(인터넷)** 를 통해 제공받는 서비스를 **Cloud 서비스** 라고 합니다.
+ - **Cloud 서비스** 는 흔히 다른 장소에 있는 물리적, 소프트웨어적 자원을 이용하여   
  서비스를 제공 받습니다.
 
 
-#1. OwnCloud 란 무엇인지와 용도
+#1. OwnCloud 란 무엇인가?
 ===
 
 ![OwnCloudimg](../../../../../assets/ownCloud-logo.png)
- - **OwnCloud**란 인터넷을 통한NAS 형태의 오픈소스 파일 호스팅 서비스를 만들고 사용하기 위한  
+ - **OwnCloud** 란 인터넷을 통한 NAS 형태의 오픈소스 파일 호스팅 서비스를 만들고 사용하기 위한  
  클라이언트-서버 소프트웨어 입니다.
- - 파일을 저장할때는 네트워크 기반 파일 저장(클라우드 스토리지)을 이용하며 **OwnCloud**의   
- 사용자에게 장치에서의 모든 파일에 액세스를 제공, 보안, 제어 및 통합을 제공합니다.  
+ - 데이터를 저장할때는 **파일 스토리지** 형식을 사용하며, **OwnCloud**의 사용자에게 권한에 따라  
+ 장치에서의 모든 파일 `액세스`, `보안`, `제어`, `통합`을 제공합니다.  
 
 #2. OwnCloud 의 설치 과정
 ===
+ - 설치 환경 : CentOS7
+
  * 2-1. DB, http 패키지 설치  
  `yum -y install mysql-community-server wget mariadb-server mariadb httpd`
  * 2-2. 필요한 php 패키지 설치  
@@ -141,7 +143,7 @@ Alias /owncloud "/var/www/html/owncloud/"
 + 파일 업로드 
   - 기본적인 NAS와 같은 형태로 Drag and Drop 또는 Upload 이용한 파일 업로드가 가능합니다.
   - 네트워크 기반의 클라우드 저장소 기능중 가장 기본적이고도 핵심 기술이라고 할 수 있겠는데요.
-  - **OwnCloud**를 이용하는 사용자끼리 공유를 하거나 파일을 저장하기 위하 사용합니다.
+  - **OwnCloud**를 이용하는 사용자끼리 공유를 하거나 파일을 저장하기 위해 사용합니다.
 ![fileupload](../../../../../assets/fileupload.png)
 
 + 파일 공유
