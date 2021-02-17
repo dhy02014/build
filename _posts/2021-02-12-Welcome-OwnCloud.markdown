@@ -5,7 +5,8 @@ date:   2021-02-12 19:00:00 +0900
 categories: jekyll update
 ---
 
-![Cloudimg](../../../../../assets/Cloud.png)
+![Cloudimg](../../../../../assets/Cloud.png)  
+[그림 출처](https://velog.io/@minidoo/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9CCloud%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C)
 
 #Cloud 란 무엇인가?
 ===
@@ -168,3 +169,4 @@ Alias /owncloud "/var/www/html/owncloud/"
   - 그리고 그 일반그룹에 대한 admin 권한을 부여하여 그룹에 대한 관리를 할 수 있도록   
   설정할 수 있습니다.  
 <img src="../../../../../assets/user.PNG" width="100%" height="100%" title="px(픽셀) 크기 설정" >
+
