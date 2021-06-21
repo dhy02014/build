@@ -9,10 +9,6 @@ cover:      "/assets/owncloud_photo/Cloud-Main-Page.jpg"
 main:       "/assets/owncloud_photo/Cloud-Main-Page.jpg"
 ---
 
-안녕하세요. OwnCloud라는 클라우드 제품에 대해 알아보고 
-
-&nbsp;
-
 ### 1. OwnCloud란 무엇인가?
 
 ![OwnCloudimg](/assets/owncloud_photo/ownCloud-logo.png)
